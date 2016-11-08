@@ -32,9 +32,9 @@ public class MyFragmentPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
-            case 1:
+            case 0:
                 return "Контакты";
-            case 2:
+            case 1:
                 return "Удаленные";
         }
         return "";
