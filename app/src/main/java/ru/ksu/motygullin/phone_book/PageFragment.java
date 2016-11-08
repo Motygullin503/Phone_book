@@ -39,7 +39,7 @@ public class PageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.list_fragment, container, false);
-        isDeleted = getArguments().getBoolean("isForDeleted");
+        isDeleted = getArguments().getBoolean("isDeleted");
 
         recyclerView = (RecyclerView) view.findViewById(R.id.list);
         adapter = new MyItemRecyclerViewAdapter(isDeleted, getActivity());

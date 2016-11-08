@@ -49,6 +49,11 @@ public class InfoFragment extends Fragment {
     }
 
     public void sendSMS(String number) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)).setType("vnd.android-dir/mms-sms"));
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT, "");
+        intent.putExtra("address", number);
+        intent.setType("text/plain");
+        startActivity(intent);
     }
 }
