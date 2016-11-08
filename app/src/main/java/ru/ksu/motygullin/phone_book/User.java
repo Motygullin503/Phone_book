@@ -9,12 +9,11 @@ import java.io.Serializable;
 public class User implements Serializable {
     String userName;
     String number;
-    boolean isDeleted;
+    boolean isDeleted = false;
 
-    public User(String userName, String number, boolean isDeleted) {
+    public User(String userName, String number) {
         this.userName = userName;
         this.number = number;
-        this.isDeleted = isDeleted;
     }
 
     public String getUserName() {
@@ -35,6 +34,10 @@ public class User implements Serializable {
 
     public boolean isDeleted() {
         return isDeleted;
+    }
+
+    public boolean equals(Object obj) {
+        return obj instanceof User && ((User) obj).userName.equals(userName) && ((User) obj).number.equals(number) && ((User) obj).isDeleted == isDeleted;
     }
 
     public void setDeleted(boolean deleted) {

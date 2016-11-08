@@ -49,7 +49,7 @@ public class MyDialogFragment extends DialogFragment implements DialogInterface.
     public void onClick(DialogInterface dialog, int which) {
         switch (which) {
             case Dialog.BUTTON_POSITIVE:
-                if(user.isDeleted){
+                if(user.isDeleted()){
                     List<User> contactList = UsersProvider.getInstance(getActivity()).getContactsList();
                     List<User> deletedContactList1 = UsersProvider.getInstance(getActivity()).getDeletedContactsList();
                     deletedContactList1.remove(user);

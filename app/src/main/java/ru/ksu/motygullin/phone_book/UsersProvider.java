@@ -59,7 +59,7 @@ public class UsersProvider {
     private List<User> fillUsers() {
         List<User> users = new ArrayList<>();
         for (int i = 1; i < 30; i++) {
-            User user = new User("Username" + i, Integer.toString(8000000 +i * 1234567), false);
+            User user = new User("Username" + i, Integer.toString(8000000 +i * 1234567));
             users.add(user);
         }
         return users;
